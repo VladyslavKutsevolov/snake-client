@@ -11,13 +11,9 @@ const connect = function () {
     console.log('Server says: ', data);
   });
 
-  connection
-    .on('connect', () => {
-      connection.write('Name: VKA');
-    })
-    .on('connect', () => {
-      connection.write('Move: up');
-    });
+  connection.on('connect', () => {
+    connection.write('Name: VKA');
+  });
 
   return connection;
 };
