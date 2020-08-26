@@ -1,16 +1,13 @@
 let connection;
+const { MOVE } = require('./constants');
 
-const handleIput = (data) => {
-  if (data === '\u0003') {
+const handleIput = (key) => {
+  console.log();
+  if (key === '\u0003') {
     process.exit();
-  } else if (data === 'w') {
-    connection.write('Move: up');
-  } else if (data === 's') {
-    connection.write('Move: down');
-  } else if (data === 'a') {
-    connection.write('Move: left');
-  } else if (data === 'd') {
-    connection.write('Move: right');
+  }
+  if (MOVE[key]) {
+    connection.write(MOVE[key]);
   }
 };
 

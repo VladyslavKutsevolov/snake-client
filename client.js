@@ -1,9 +1,10 @@
 const net = require('net');
+const { IP, PORT, NAME } = require('./constants');
 
 const connect = function () {
   const connection = net.createConnection({
-    host: '135.23.222.131',
-    port: 50542,
+    host: IP,
+    port: PORT,
   });
   connection.setEncoding('utf8');
 
@@ -12,7 +13,7 @@ const connect = function () {
   });
 
   connection.on('connect', () => {
-    connection.write('Name: VKA');
+    connection.write(NAME);
   });
 
   return connection;
