@@ -15,7 +15,9 @@ const connect = function () {
     .on('connect', () => {
       connection.write('Name: VKA');
     })
-    .on('connect', () => connection.write('Move: up'));
+    .on('connect', () => {
+      connection.write('Move: up');
+    });
 
   return connection;
 };
