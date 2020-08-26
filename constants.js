@@ -6,7 +6,7 @@ const MOVE = {
   s: 'Move: down',
   a: 'Move: left',
   d: 'Move: right',
-  m: 'Hello!',
+  m: 'Say: Hello!',
 };
 
 module.exports = {
